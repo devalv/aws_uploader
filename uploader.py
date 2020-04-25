@@ -181,7 +181,7 @@ def main():
 
     # Assign these values before running the program
     backups_set = find_backup(args.backup_dir, args.backup_ext)
-    if len(backups_set) == 0:
+    if not backups_set:
         logging.warning(f'No backups in {args.backup_dir} found. Exit.')
         shutdown(1)
 
